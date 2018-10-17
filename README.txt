@@ -31,7 +31,7 @@ T(out, p_i) = -1
 Recurrence
 
 T(cursor, p_i) = T(cursor.move(p_i), p_(i-1)) #for p_i in {u, d, l, r}
-			   = Max(T(cursor.move(u), p_(i-1)), T(cursor.move(d), p_(i-1)), T(cursor.move(l), p_(i-1)), T(cursor.move(r), p_(i-1))) #for p_i = ?
+T(cursor, p_i) = Max(T(cursor.move(u), p_(i-1)), T(cursor.move(d), p_(i-1)), T(cursor.move(l), p_(i-1)), T(cursor.move(r), p_(i-1))) #for p_i = ?
 
 Using the above recurrence it is possible to resolve the problem using dyanimc programming
 If T(end, p_n) = 0 then a solution has been found
