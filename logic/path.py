@@ -13,5 +13,11 @@ class Path():
     def __len__(self):
         return len(self.commands)
 
+    def __str__(self):
+        result = ""
+        for i in range(1, len(self.commands)):
+            result +=self.commands[i]
+        return result
+
     def command(self, i):
         return self[i]

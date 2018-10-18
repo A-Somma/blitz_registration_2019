@@ -52,7 +52,7 @@ class RecurrenceTable():
     def update_node(self, node, i):
         if self.path.command(i) in ("udlr"):
             origin_node = node.moveFrom(self.path.command(i))
-            self[node, i] = self[origin_node, i-1]
+            self[node, i] = (self[origin_node, i-1][0], self.path.command(i))
         elif self.path.command(i) == "?":
             new_command = self.maximize_command(node, i)
             if new_command:
@@ -71,3 +71,13 @@ class RecurrenceTable():
             return (0, "r")
         elif self[right_node, i-1][0] == 0:
             return (0,"l")
+
+    def backtrack(self, cursor, i):
+        if self[(cursor, i)][0]==-1:
+            return False
+        commands = ""
+        for j in range(i, 0, -1):
+            command = self[(cursor, j)][1]
+            commands = command + commands
+            cursor = cursor.moveFrom(command)
+        return Path(commands)
