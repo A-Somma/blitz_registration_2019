@@ -1,4 +1,4 @@
-Stub project for coveo blitz registration
+Project for coveo blitz registration
 
 Strategy for resolving problem is descibed below:
 
@@ -20,19 +20,19 @@ cursor:= Node representing the current position
 
 Let us define the following recurrence
 
-T(cursor, p_i):= A function of the cursor and p_i command
+T(cursor, i):= A function of the cursor and the command number
 
 Initial conditions
 
-T(start, f) = 0
-T(cursor, f) = -1 #if cursor != start
-T(out, p_i) = -1
+T(start, 0) = 0
+T(cursor, 0) = -1 #if cursor != start
+T(out, i) = -1
 
 Recurrence
 
-T(cursor, p_i) = T(cursor.move(p_i), p_(i-1)) #for p_i in {u, d, l, r}
-T(cursor, p_i) = Max(T(cursor.move(u), p_(i-1)), T(cursor.move(d), p_(i-1)), T(cursor.move(l), p_(i-1)), T(cursor.move(r), p_(i-1))) #for p_i = ?
+T(cursor, i) = T(cursor.move(p_i), i-1) #for p_i in {u, d, l, r}
+T(cursor, i) = Max(T(cursor.move(u), i-1), T(cursor.move(d), i-1), T(cursor.move(l), i-1), T(cursor.move(r), i-1)) #for p_i = ?
 
 Using the above recurrence it is possible to resolve the problem using dyanimc programming
-If T(end, p_n) = 0 then a solution has been found
-If T(end, p_n) = -1 Then no solution is possible
+If T(end, n) = 0 then a solution has been found
+If T(end, n) = -1 Then no solution is possible
