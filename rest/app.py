@@ -10,6 +10,7 @@ from logic.path import Path
 
 
 app = Flask(__name__)
+print(__name__)
 
 @app.route("/", methods=["POST"])
 def register():
