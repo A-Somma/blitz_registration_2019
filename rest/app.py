@@ -1,3 +1,4 @@
+import os
 import json
 from flask import Flask
 from flask import request
@@ -6,8 +7,6 @@ from flask import jsonify
 import logic.solver as solver
 from logic.node import Node
 from logic.path import Path
-
-
 
 app = Flask(__name__)
 
@@ -73,5 +72,9 @@ def response(solutions):
     res["solutions"] = solutions
     return jsonify(res)
 
-def run():
-    app.run(debug=True, port=8080)
+def run(*args):
+    port = os.environ.get('PORT', 8080)
+    app.run(debug=True, port=port)
+
+if __name__ == "__main__":
+    app.run(debug=True)
