@@ -1,1 +1,1 @@
-web: gunicorn rest.app:run()
+web: gunicorn rest.app:run
