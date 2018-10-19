@@ -1,3 +1,4 @@
+import os
 import json
 from flask import Flask
 from flask import request
@@ -10,7 +11,6 @@ from logic.path import Path
 
 
 app = Flask(__name__)
-print(__name__)
 
 @app.route("/", methods=["POST"])
 def register():
@@ -75,4 +75,5 @@ def response(solutions):
     return jsonify(res)
 
 def run():
-    app.run(debug=True, port=8080)
+    port = os.environ.get('PORT', 9090)
+    app.run(debug=True, port=port)
