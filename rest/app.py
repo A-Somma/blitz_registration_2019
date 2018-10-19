@@ -74,6 +74,5 @@ def response(solutions):
     res["solutions"] = solutions
     return jsonify(res)
 
-def run():
-    port = os.environ.get('PORT', 9090)
-    app.run(debug=True, port=port)
+def run(debug, port):
+    app.run(debug=debug, port=port)
