@@ -29,37 +29,37 @@ def solve(puzzle):
 def response(solutions):
 
     antoine = {"isCaptain": True,
-               "fullName": "Antoine Somma", 
-               "email": "antoine.somma.1@gmail.com",
-               "googleAccount": "antoine.somma.1@gmail.com",
-               "phone": "581-997-0373",
+               "fullName": "", 
+               "email": "",
+               "googleAccount": "",
+               "phone": "",
                "school":"Laval University",
                "schoolProgram": "Software Engineering",
-               "graduationDate": 1577836800000}
+               "graduationDate": 0}
     genevieve = {"isCaptain": False,
-                 "fullName": "Genevieve Gilbert", 
-                 "email": "gegegilbert@gmail.com",
-                 "googleAccount": "gegegilbert@gmail.com",
-                 "phone": "418-455-4228",
+                 "fullName": "", 
+                 "email": "",
+                 "googleAccount": "",
+                 "phone": "",
                  "school":"Laval University",
                  "schoolProgram": "Software Engineering",
-                 "graduationDate": 1556668800000}
+                 "graduationDate": 0}
     philippe = {"isCaptain": False,
-                "fullName": "Philippe Giroux-Ayotte", 
-                "email": "philippe.giroux.ayotte@gmail.com ",
-                "googleAccount": "philippe.giroux.ayotte@gmail.com ",
-                "phone": "418-265-4178",
+                "fullName": "", 
+                "email": "",
+                "googleAccount": "",
+                "phone": "",
                 "school":"Laval University",
                 "schoolProgram": "Software Engineering",
-                "graduationDate": 1546300800000}
+                "graduationDate": 0}
     jeffrey = {"isCaptain": False,
-               "fullName": "Jeffrey Tremblay", 
-               "email": "jeffrey.tremblay26@gmail.com ",
-               "googleAccount": "jeffrey.tremblay26@gmail.com ",
-               "phone": "418-291-4431",
+               "fullName": "", 
+               "email": "",
+               "googleAccount": "",
+               "phone": "",
                "school":"Laval University",
                "schoolProgram": "Software Engineering",
-               "graduationDate": 1546300800000}
+               "graduationDate": 0}
     participants = list()
     participants.append(antoine)
     participants.append(philippe)
